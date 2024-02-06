@@ -21,24 +21,6 @@ kbd
     margin: unset !important
     font-size: 1rem !important
 
-// 文章页段落内容：首行缩进
-#l_main > article.cus-indent
-  p
-    text-indent 2em
-    &.p
-      text-indent 0
-  details,
-  blockquote,
-  section,
-  .prev-next,
-  .new-meta-box,
-  .note,
-  .tag,
-  .tab-pane .checkbox,
-  li
-    p
-      text-indent 0
-
 // 链接下划线
 .article a:not([class]):not([data-fancybox]),
 .content > a
@@ -69,3 +51,30 @@ kbd
 .footerMax380
   @media screen and (max-width: 380px)
     display: none
+
+// 禁止文本选中
+.not-select,
+figcaption,
+footer,
+section,
+details summary,
+.new-meta-box,
+.nav-tabs
+  -webkit-touch-callout none
+  -webkit-user-select none
+  -khtml-user-select none
+  -moz-user-select none
+  -ms-user-select none
+  user-select none
+  & p,
+  & span
+    cursor: $default,default
+  &.default-cursor
+    cursor: $default,default !important
+.allow-select
+  -webkit-touch-callout all
+  -webkit-user-select all
+  -khtml-user-select all
+  -moz-user-select all
+  -ms-user-select all
+  user-select all
