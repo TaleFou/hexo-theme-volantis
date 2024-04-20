@@ -2,6 +2,8 @@
 //  样式覆盖
 //===========================
 
+
+
 // 样式修订 HandSome H1 H2 标题
 article#post
   & h2
@@ -41,13 +43,22 @@ h1.title.common_read_h1
   text-align: center !important
   font-size: 2.5rem !important
 
+// 文章页导航栏标题居中
+.l_header #wrapper.sub .nav-sub .title
+  margin: 0 auto
+  font-size: 1.5rem
+  overflow: hidden
+  font-weight: 800 !important
+  @media screen and (max-width: $device-mobile)
+    margin: unset !important
+    font-size: 1rem !important
 
 // 文章页段落内容：首行缩进
 #l_main > article.cus-indent
   p
     text-indent 2em
     &.p
-      text-indent 0 
+      text-indent 0
   details,
   blockquote,
   section,
@@ -88,7 +99,7 @@ details summary
 
 
 // details 下的 timelines 高度间距缩短
-details .content .timelines-common 
+details .content .timelines-common
   padding 0
   margin-bottom -1em
 
@@ -109,14 +120,3 @@ table a:not([class]),
     background: linear-gradient(0deg, rgba(32,148,243,0.2), rgba(32,148,243,0.2)) no-repeat left 100% / 100% 100%;
   }
 }
-
-
-// 文章页导航栏标题居中
-.l_header #wrapper.sub .nav-sub .title
-  margin: 0 auto
-  font-size: 1.5rem
-  overflow: hidden
-  font-weight: 800 !important
-  @media screen and (max-width: $device-mobile)
-    margin: unset !important
-    font-size: 1rem !important
