@@ -56,23 +56,6 @@ kbd
     margin: unset !important
     font-size: 1rem !important
 
-// 文章页段落内容：首行缩进
-#l_main > article.cus-indent
-  p
-    text-indent 2em
-    &.p
-      text-indent 0
-  details,
-  blockquote,
-  section,
-  .prev-next,
-  .new-meta-box,
-  .note,
-  .tag,
-  .tab-pane .checkbox,
-  li
-    p
-      text-indent 0
 
 // 文章页页脚导航：限制其高度
 #l_main .article .prev-next>a p.content
@@ -123,3 +106,36 @@ table a:not([class]),
     background: linear-gradient(0deg, rgba(32,148,243,0.2), rgba(32,148,243,0.2)) no-repeat left 100% / 100% 100%;
   }
 }
+
+// 顶部导航栏铺满屏幕
+.l_header
+  @media screen and (max-width: $device-2k)
+    left: 0 !important
+    border-radius: 0 !important
+    max-width: 100% !important
+
+// 移动端不显示卡片
+#safearea
+  @media screen and (max-width: $device-mobile)
+    margin: 0
+    box-shadow: none
+    .body-wrapper
+      padding: 0
+    #l_main
+      article#comments,
+      article#friends,
+      article#post,
+      article#page,
+      article#arc      
+        border-radius: 0
+      article#cat,
+      article#tag
+        margin: 0
+        border-radius: 0
+      .post-wrapper
+        margin: 0 0 16px
+        .post
+          border-radius: 0
+    #l_side
+      .widget.mobile
+        border-radius: 0
