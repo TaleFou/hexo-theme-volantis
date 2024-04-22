@@ -89,7 +89,7 @@ details .content .timelines-common
   padding 0
   margin-bottom -1em
 
-// 对 a 链接加一个样式
+// 修改链接的下划线样式
 li:not([class]) a:not([class]), 
 p:not([class]) a:not([class]), 
 table a:not([class]),
@@ -132,3 +132,7 @@ table a:not([class]),
     #l_side
       .widget.mobile
         border-radius: 0
+
+// 文章页不显示头图
+#l_main .article .headimg-div
+  display: none
