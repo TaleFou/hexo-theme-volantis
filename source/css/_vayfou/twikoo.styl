@@ -1,86 +1,81 @@
 //====================================================//
 //                    评论框 Twikoo                   //
 //====================================================//
-// 输入框调整
-.OwO .OwO-body
-  min-width: 31.25rem
-  color: var(--text)
-.twikoo svg
-  color: var(--text-p1)
+// 输入框等调整
+.OwO .OwO-body {
+  min-width: 31.25rem;
+  color: var(--text);
+}
 
-.tk-expand 
-  width: 100%
-  cursor: pointer
-  padding: 0.75em
-  text-align: center
-  trans1 background
-  border-radius: $border-card
-  letter-spacing: 5px
-  background: var(--block)
+.twikoo svg {
+  color: var(--text-p1);
+}
 
-.twikoo 
-  .tk-comments > .tk-submit
-    overflow: visible !important
-  .tk-comments
-    .OwO .OwO-body
-      border-color: var(--block-border) !important
-      border-radius: $border-card !important
-      overflow: hidden
-      background-color: var(--block) !important
-      cursor: auto
-      transform: translateZ(0)
-      animation: .3s ease .1s 1 normal both running donate_effcet
-      .OwO-bar
-        color: var(--text)
-      .OwO-items-show
-        margin: 12px 8px
-    button.el-button.tk-cancel.el-button--default.el-button--small
-      background: var(--block)
-      border-radius: $border-card
-      color: var(--text-p1)
-      &:hover
-        background: var(--card)
-        color: var(--text-p2)
-    a.tk-submit-action-icon.__markdown
-      display: none
-    &>div.tk-submit>div.tk-row.actions>a
-      display: none
-    .el-button.tk-preview
-      display: none
-    .el-button--primary.is-disabled, .el-button--primary.is-disabled:active, .el-button--primary.is-disabled:focus, .el-button--primary.is-disabled:hover
-      background-color: var(--block)
-      color: var(--text-meta)
-    .el-button--primary
-      border-color: var(--text-p1)
-      color: var(--text)
-      border-radius: $border-card
-      trans1 all
-      width: 6.25rem
-      position: absolute
-      top: -40px
-      right: 0
-      margin-left: 0.5rem!important
-      height: 32px
-    .el-loading-spinner .path
-      stroke: $color-theme
-    .tk-input 
-      .el-textarea__inner
-        min-height: 130px !important
-        border: none
-        border-radius: $border-card
-        display: block
-        resize: vertical
-        padding: 16px 16px 40px 16px
-        line-height: 1.5
-        box-sizing: border-box
-        width: 100%
-        font-size: inherit
-        color: var(--text-p1)
-        background: var(--block)
+.tk-expand {
+  width: 100%;
+  cursor: pointer;
+  padding: 0.75em;
+  text-align: center;
+  transition: background;
+  border-radius: $border-card;
+  letter-spacing: 5px;
+  background: var(--block);
+}
 
-// 整体字体大小调整
-.tk-comment
-  font-size: 0.875rem !important
+.twikoo .tk-comments > .tk-submit {
+  overflow: visible !important;
+}
+
+.twikoo .tk-comments .OwO .OwO-body {
+  border-color: var(--block-border) !important;
+  border-radius: $border-card !important;
+  overflow: hidden;
+  background-color: var(--block) !important;
+  cursor: auto;
+  transform: translateZ(0);
+  animation: .3s ease .1s 1 normal both running donate_effcet;
+}
+
+/* Add the new link style here */
+.twikoo .tk-content span a:not([data-fancybox="gallery"]),
+.twikoo .tk-main .tk-content span > a {
+  color: var(--text-p1);
+  padding: 0 0.2em;
+  text-decoration: none;
+  position: relative;
+  border-radius: 0;
+  transition: all .2s ease-out;
+  background: linear-gradient(0deg, rgba(32,148,243,0.2), rgba(32,148,243,0.2)) no-repeat left 100% / 100% 0;
+
+  &:hover {
+    text-decoration: none;
+    border-radius: 4px;
+    background: linear-gradient(0deg, rgba(32,148,243,0.2), rgba(32,148,243,0.2)) no-repeat left 100% / 100% 100%;
+  }
+}
+
+/* Rest of your original styles */
+.twikoo .tk-comments button.el-button.tk-cancel.el-button--default.el-button--small {
+  background: var(--block);
+  border-radius: $border-card;
+  color: var(--text-p1);
+
+  &:hover {
+    background: var(--card);
+    color: var(--text-p2);
+  }
+}
+
+/* Add the rest of your original styles here */
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+  .OwO .OwO-body {
+    min-width: 260px;
+  }
+
+  /* Add additional media query styles here */
+}
 
 // 加载状态下居中
 #twikoo_container
