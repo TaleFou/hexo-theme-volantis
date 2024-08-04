@@ -69,6 +69,13 @@ table a:not([class]),
   }
 }
 
+// 顶部导航栏铺满屏幕
+.l_header
+  @media screen and (max-width: $device-2k)
+    left: 0 !important
+    border-radius: 0 !important
+    max-width: 100% !important
+
 // 移动端不显示卡片
 #safearea
   @media screen and (max-width: $device-mobile)
@@ -98,10 +105,3 @@ table a:not([class]),
 // 文章页不显示头图
 #l_main .article .headimg-div
   display: none
-
-// 顶部导航栏铺满屏幕
-.l_header
-  @media screen and (max-width: $device-2k)
-    left: 0 !important
-    border-radius: 0 !important
-    max-width: 100% !important
