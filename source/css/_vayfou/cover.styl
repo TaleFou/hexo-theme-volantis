@@ -36,15 +36,6 @@ kbd
     overflow-wrap: break-word;
     display: inline-block;
     text-indent: 0
-}
-
-// 列表页正文内容左对齐
-.post.post-v3.white-box  p
-  text-align: left
-
-// 侧边栏：个人卡片
-.blogger .text
-  margin-bottom: 10px
 
 // 文章页导航栏标题居中
 .l_header #wrapper.sub .nav-sub .title
@@ -56,38 +47,9 @@ kbd
     margin: unset !important
     font-size: 1rem !important
 
-
-// 文章页页脚导航：限制其高度
-#l_main .article .prev-next>a p.content
-  max-height: 5rem
-  overflow: hidden
-
-
-// 标签：blocknote 标题字号增大
-.note.quote strong
-  font-size: 1.5rem
-
-// 标签：标题大小
-details summary
-  font-size 1em
-
-// 标签：缩短 Tab 内时间线标题高度
-.tab-pane > .timeline > .h2
-  padding-top: 0
-
 // 标签：link 链接居中
 .md .tag.link
   text-align: center
-
-// 自定义阴影
-.cus-shadow
-  box-shadow: 0 1px 3px #0000001f, 0 1px 2px #0000003d;
-
-
-// details 下的 timelines 高度间距缩短
-details .content .timelines-common
-  padding 0
-  margin-bottom -1em
 
 // 修改链接的下划线样式
 li:not([class]) a:not([class]), 
@@ -136,3 +98,10 @@ table a:not([class]),
 // 文章页不显示头图
 #l_main .article .headimg-div
   display: none
+
+// 顶部导航栏铺满屏幕
+.l_header
+  @media screen and (max-width: $device-2k)
+    left: 0 !important
+    border-radius: 0 !important
+    max-width: 100% !important
