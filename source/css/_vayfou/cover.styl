@@ -54,6 +54,16 @@ kbd
 .md .tag.link
   text-align: center
 
+// 文章页页脚导航：限制其高度
+#l_main .article .prev-next>a p.content
+  max-height: 5rem
+  overflow: hidden
+
+// details 下的 timelines 高度间距缩短
+details .content .timelines-common
+  padding 0
+  margin-bottom -1em
+
 // 对 a 链接加一个样式
 li:not([class]) a:not([class]), 
 p:not([class]) a:not([class]), 
