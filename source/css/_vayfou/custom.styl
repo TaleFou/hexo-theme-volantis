@@ -58,29 +58,6 @@ details summary,
 
 
 //======================================//
-// 隐藏文本
-// <span class="bb_spoiler" title="xxx">xxxx</span>
-.bb_spoiler, .bb_spoiler a, a .bb_spoiler, .bb_spoiler a.new
-  cursor: $pointer,pointer
-  border-bottom 1px solid
-  border-color var(--color-p)
-  background-color var(--color-card)
-  color var(--color-card)
-  text-shadow none
-  padding 0 2px
-  margin 0 2px
-.bb_spoiler:hover, .bb_spoiler:active,
-  .bb_spoiler:hover .bb_spoiler, .bb_spoiler:active .bb_spoiler
-  color var(--color-p) !important
-.bb_spoiler
-  &:hover
-    opacity 1
-    transition-duration 0.3s
-//======================================//
-
-
-
-//======================================//
 // 文章页导航栏修饰：居中、加粗等
 .fix-header-title
   margin: 0 auto
@@ -117,38 +94,6 @@ details summary,
 
 
 //======================================//
-// 侧边栏 Tab 标签支持
-.widget 
-  div.tabs
-    margin 0
-    border none
-    .nav-tabs
-      border-top 1px solid rgba(68,68,68,0.2)
-      border-left 1px solid rgba(68,68,68,0.2)
-      border-right 1px solid rgba(68,68,68,0.2)
-      border-top-left-radius 8px
-      border-top-right-radius 8px
-      li.tab
-        flex 1
-        &:last-child
-          padding-right 0
-    .tab-content
-      font-size 14px
-      p
-        text-align center
-        span
-          font-weight bold
-          padding 0 8px
-      .tab-pane-content
-        text-align center
-        margin-top 0.5rem
-    ul, p
-      margin 0
-//======================================//
-
-
-
-//======================================//
 //HTTP 451 错误
 .note.quote.cus451:after
   @media screen and (min-width: 900px)
@@ -161,33 +106,13 @@ details summary,
     position: absolute;
     background-size: 160px;
     background-repeat: no-repeat;
-
-
-
-//======================================//
-// 评论隐私
-.comment-policy
-  background-color: #ebeef2;
-  position: relative;
-  margin-bottom: 18px;
-  background-position: right 20px top 20px;
-  border: none;
-  border-radius: 4px;
-  .content
-    padding: 15px;
-    .comment-policy-title
-      font-size: 15px;
-      font-weight: 600;
-      line-height: 1.45em !important;
-    .comment-policy-link
-      font-size: 14px;
 //======================================//
 
 
 
 //======================================//
 // 表格：居中
-table:not(figure table/* 此处排除代码块 */){
+table:not(figure table){
     display: table !important;
     margin: auto;
 }
