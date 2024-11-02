@@ -55,19 +55,11 @@
       txt-ellipsis()
       flex-shrink: 0
       line-height: $navbar-height
-      padding: 0 $gap * 0.5
+      padding: 0 $gap*1.5
       font-size: $fontsize-h3
       font-family: $fontfamily-logo
       img
         height: $navbar-height
-        padding $gap * 0.5
-      @media screen and (max-width: $device-mobile)
-        img
-          display none
-      @media screen and (min-width: $device-mobile)
-        span
-          display none
-
 
   .nav-sub
     max-width: $layout-width
@@ -206,14 +198,12 @@
         .input
           width: "calc(100% - %s)" % (3 * $gap + 2 * $iconW)
 
-//ul.m-pc
-//  >li>a
-//    span
-//      color: inherit
-//    border-bottom: 2px solid transform
-//    &:active,&.active
-//      border-bottom: 2px solid $color-theme
-
+ul.m-pc
+  >li>a
+    color: inherit
+    border-bottom: 2px solid transparent
+    &:active,&.active
+      border-bottom: 2px solid $color-theme
 ul.m-pc,ul.list-v
   li:hover
     >ul.list-v
@@ -229,11 +219,10 @@ ul.nav-list-h
     height: 100%
     line-height: 2.4
     border-radius: $border-button
-    > a
+    >a
       -webkit-font-smoothing: antialiased
       -moz-osx-font-smoothing: grayscale
-      span
-        font-weight: 600
+      font-weight: 600
 
 ul.list-v
   z-index: 1
@@ -272,11 +261,11 @@ ul.list-v
     display: block
     color: var(--color-list)
     font-size: $fontsize-meta
-    // font-weight: bold
+    font-weight: bold
     line-height: 36px
     @media screen and (max-width: $device-laptop)
       line-height: 40px
-    padding: 0 $gap + 4px 0 $gap
+    padding: 0 $gap + $border-line + 2px 0 $gap
     text-overflow: ellipsis
     margin: 0 4px
     border-radius: 4px
@@ -292,19 +281,8 @@ ul.list-v
     >ul>li>a
       display: block
       padding: 0 8px
-      display:flex
-      .icon
-        width: 16px
-        margin-right: 6px
-        i
-          display: inline-block
-    >ul>li>ul 
-      .icon
-        width: 16px
-        margin-right: 2px
-        i
-          display: inline-block
-
+      >i
+        margin-right: 4px
 
 .l_header ul.nav-list-h>li
   color: var(--color-list)
@@ -314,8 +292,7 @@ ul.list-v
     overflow: hidden
     color: inherit
     &:active,&.active
-      span
-        color: $color-theme
+      color: $color-theme
   &:hover>a
     color: var(--color-list-hl)
   i.music
@@ -402,7 +379,6 @@ ul.list-v
       .switcher
         display: flex
         margin-right: $gap * 0.5
-        height: 64px
     .menu
       display:none
 
