@@ -66,16 +66,3 @@ img[alt="Author"].error
   margin: 0 auto
   span
     display: none !important
-
-// 为评论框的图片加载失败文本
-#comments
-  img.error
-    &:after
-      content: 'img error'
-
-// 重写图片大小：评论框头像
-.fix-avatar-imgError > div > img.error
-  min-height: 100%
-  min-width: 100%
-  &:after
-    display: none
