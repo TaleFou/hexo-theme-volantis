@@ -1,13 +1,13 @@
 $fontfamily = "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, "Lucida Console", sans-serif
 if hexo-config('custom_css.fontfamily.bodyfont')
   if hexo-config('custom_css.fontfamily.bodyfont.fontfamily')
-    $fontfamily = convert(hexo-config('custom_css.fontfamily.bodyfont.fontfamily')), Menlo, Monaco, monospace, sans-serif
+    $fontfamily = convert(hexo-config('custom_css.fontfamily.bodyfont.fontfamily')), Menlo, Monaco, sans-serif
 
 
-$fontfamily-code = Menlo, Monaco, courier, sans-serif
+$fontfamily-code = Menlo, Monaco, monospace, courier, sans-serif
 if hexo-config('custom_css.fontfamily.codefont')
   if hexo-config('custom_css.fontfamily.codefont.fontfamily')
-    $fontfamily-code = convert(hexo-config('custom_css.fontfamily.codefont.fontfamily')), monospace, courier, sans-serif
+    $fontfamily-code = convert(hexo-config('custom_css.fontfamily.codefont.fontfamily')), courier, sans-serif
 
 
 
